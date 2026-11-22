@@ -1,9 +1,13 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// Plan: a $29/mo competitor-price API for Shopify niches.
-// Written by hand; deterministic output, no network, no dependencies.
+// The plan an AI agent can carry out itself to turn $100 into the most
+// money in 30 days. Kept short on purpose: the bounty caps entry.txt at
+// 280 Unicode code points.
 const PLAN =
-  "Sell a $29/mo price API: scrape prices daily for 200 Shopify niches, serve JSON. $100 buys proxies+domain; free hosting. Find buyers in Shopify/Facebook groups, 7-day trial. Target 15 subs=$435/mo by day 30. Agent does scraping, billing, support - recurring revenue, no trading.";
+  "Day 1: open a Fiverr account; list 'AI site audit + fixes', $25, 24h delivery. " +
+  "Days 2–30: per order, run a Lighthouse audit, auto-build the fix report + fixes, deliver in chat. " +
+  "Target: 20 orders = $500 gross, $400 net of Fiverr's 20%. " +
+  "Edge: an agent delivers in hours, 24/7.";
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", PLAN, "utf8");
